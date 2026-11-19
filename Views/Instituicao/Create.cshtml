@@ -1,0 +1,46 @@
+@model IES.Models.Instituicao
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+</head>
+
+<body>
+
+    <form asp-action="Create">
+        <div>
+            <h4>Instituicao</h4>
+            <hr />
+            <div asp-validation-summary="ModelOnly"></div>
+            <div>
+                <label asp-for="Nome"></label>
+                <div>
+                    <input asp-for="Nome" />
+                    <span asp-validation-for="Nome"></span>
+                </div>
+            </div>
+            <div>
+                <label asp-for="Endereco"></label>
+                <div>
+                    <input asp-for="Endereco" />
+                    <span asp-validation-for="Endereco"></span>
+                </div>
+            </div>
+            <div>
+                <input type="submit" value="Create" />
+            </div>
+        </div>
+    </form>
+    <div>
+        <a asp-action="Index">Retorno à Listagem</a>
+    </div>
+</body>
+
+</html>
